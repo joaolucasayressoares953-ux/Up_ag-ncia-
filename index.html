@@ -7,10 +7,14 @@
   <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ipUp_agencia — Estratégia, Branding e Conversão</title>
-  <meta name="description" content="ipUp_agencia cria sites premium, vídeos curtos e campanhas estratégicas para marcas que querem vender mais." />
+  <meta name="description" content="Up_agencia cria sites premium, vídeos curtos e campanhas que geram autoridade, tráfego e vendas para marcas que querem crescer." />
+  <meta property="og:title" content="Up_agencia — Sua marca em destaque" />
+  <meta property="og:description" content="Sites premium, vídeos curtos para Reels/TikTok e tráfego pago com foco em conversão." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232563EB'/%3E%3Ctext x='50' y='58' font-size='48' fill='white' text-anchor='middle' font-family='Inter, Arial'%3EU%3C/text%3E%3C/svg%3E" />
   <style>
     :root {
       --blue: #2563eb;
@@ -22,59 +26,213 @@
       --border: rgba(15, 23, 42, 0.08);
       --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', Arial, sans-serif;
       color: var(--text);
       background: linear-gradient(135deg, #f8fbff 0%, #f2f7ff 55%, #eef4ff 100%);
       line-height: 1.6;
     }
+
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
-    .hero { padding: 24px 0 72px; color: var(--white); background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 42%), linear-gradient(140deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%); }
-    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 24px; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .02em; }
-    .brand-mark { width: 46px; height: 46px; border-radius: 12px; background: var(--white); color: var(--blue); display:grid; place-items:center; font-weight: 800; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; padding: 13px 20px; border-radius: 999px; font-weight:700; transition: transform .2s ease; cursor:pointer; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 24px 0 72px;
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 42%), linear-gradient(140deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
     .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--white); color: var(--blue); box-shadow: 0 12px 24px rgba(15,23,42,.18); }
-    .btn-secondary { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.24); }
-    .hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items:center; padding: 28px 0 10px; }
-    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding: 8px 12px; border-radius:999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16); margin-bottom: 16px; font-size: .92rem; }
-    h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.05; margin-bottom: 16px; font-weight: 800; }
+    .btn-primary { background: var(--white); color: var(--blue); box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18); }
+    .btn-secondary { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.24); }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      padding: 28px 0 10px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: #dbeafe;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1.04;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
     .hero p { font-size: 1.05rem; color: #e2e8f0; max-width: 640px; }
-    .hero-buttons { display:flex; flex-wrap:wrap; gap:12px; margin: 24px 0 20px; }
-    .trust-list { display:flex; flex-wrap:wrap; gap: 14px; color: #dbeafe; font-size: .95rem; }
-    .hero-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 24px; padding: 24px; box-shadow: var(--shadow); backdrop-filter: blur(10px); }
-    .hero-card h3 { margin-bottom: 12px; }
-    .hero-card ul { list-style: none; display:grid; gap: 10px; color: #eff6ff; }
+
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 24px; }
+    .trust-list { display: flex; flex-wrap: wrap; gap: 14px; color: #dbeafe; font-size: 0.95rem; }
+    .trust-list span { display: inline-flex; align-items: center; gap: 7px; }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 { font-size: 1.15rem; margin-bottom: 16px; }
+    .hero-card ul { list-style: none; display: grid; gap: 10px; }
+    .hero-card li { display: flex; align-items: flex-start; gap: 8px; color: #eff6ff; }
+
     .section { padding: 72px 0; }
-    .section.alt { background: rgba(255,255,255,.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .section-title { text-align:center; margin-bottom: 34px; }
+    .section.alt { background: rgba(255,255,255,0.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-title { text-align: center; margin-bottom: 34px; }
     .section-title h2 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); margin-bottom: 10px; }
     .section-title p { color: var(--muted); max-width: 700px; margin: 0 auto; }
-    .cards-grid, .steps-grid, .pricing-grid, .testimonials-grid { display:grid; gap: 20px; }
+
+    .cards-grid, .steps-grid, .pricing-grid, .testimonials-grid {
+      display: grid;
+      gap: 20px;
+    }
+
     .cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .steps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .pricing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .card, .step, .pricing-card, .testimonial, .calculator-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
-    .pricing-card.featured { border-color: rgba(37,99,235,.3); transform: translateY(-4px); }
+
+    .card, .step, .pricing-card, .testimonial, .calculator-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .step h3, .pricing-card h3 { margin-bottom: 10px; color: var(--blue-dark); }
+    .card p, .step p, .pricing-card p, .testimonial p { color: var(--muted); }
+
+    .pricing-card.featured { border-color: rgba(37,99,235,0.3); transform: translateY(-4px); }
     .price { font-size: 2rem; font-weight: 800; color: var(--blue); margin: 10px 0; }
     .price small { font-size: 1rem; color: var(--muted); font-weight: 600; }
-    .pricing-card ul { list-style:none; display:grid; gap:8px; margin: 14px 0 20px; color: var(--muted); }
-    .pricing-card li::before { content:'•'; color: var(--blue); margin-right:8px; }
-    .calculator-card { margin-top: 10px; }
+    .pricing-card ul { list-style: none; display: grid; gap: 8px; margin: 14px 0 20px; color: var(--muted); }
+    .pricing-card li::before { content: '•'; color: var(--blue); margin-right: 8px; }
+
+    .calculator-card { margin-top: 12px; }
     .form-group { margin-bottom: 15px; }
-    .form-group label { display:block; margin-bottom:8px; font-weight:700; }
-    .form-group select { width:100%; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 12px 14px; font: inherit; color: var(--text); }
-    .total-price { margin-top: 6px; padding: 14px 16px; border-radius: 12px; background: var(--blue-soft); color: var(--blue); font-size: 1.2rem; font-weight: 800; text-align:center; }
-    .metric-row { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px; margin-top: 18px; }
-    .metric-box { text-align:center; background: #f8fbff; border: 1px solid var(--border); border-radius: 16px; padding: 14px; }
-    .metric-box strong { display:block; font-size: 1.2rem; color: var(--blue); }
-    .cta-block { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top: 18px; }
-    footer { padding: 36px 0 42px; text-align:center; color: var(--muted); background: #0f172a; color: #e2e8f0; }
-    @media (max-width: 900px) { .hero-grid, .cards-grid, .steps-grid, .pricing-grid, .testimonials-grid, .metric-row { grid-template-columns: 1fr; } }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 700; }
+    .form-group select {
+      width: 100%;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+      color: var(--text);
+    }
+
+    .total-price {
+      margin-top: 6px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .cta-block {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .metric-box { text-align: center; background: #f8fbff; border: 1px solid var(--border); border-radius: 16px; padding: 14px; }
+    .metric-box strong { display: block; font-size: 1.2rem; color: var(--blue); }
+
+    .testimonial { background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%); }
+    .testimonial blockquote { font-size: 1.06rem; color: var(--text); }
+    .testimonial footer { margin-top: 10px; color: var(--muted); font-weight: 600; }
+
+    footer {
+      padding: 36px 0 42px;
+      text-align: center;
+      color: var(--muted);
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .cards-grid, .steps-grid, .pricing-grid, .testimonials-grid, .metric-row { grid-template-columns: 1fr; }
+      .hero-card { margin-top: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -87,21 +245,28 @@
         </div>
         <a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Entrar na comunidade</a>
       </nav>
+
       <div class="hero-grid">
         <div>
           <div class="eyebrow">⚡ Mais autoridade. Mais tráfego. Mais vendas.</div>
           <h1>Sua marca merece um site premium que converte.</h1>
           <p>Transformamos presença digital em resultado real com sites modernos, vídeos curtos para Reels/TikTok e campanhas estratégicas que geram demanda qualificada.</p>
+
           <div class="hero-buttons">
             <a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Quero entrar na comunidade</a>
             <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Ver comunidade</a>
           </div>
+          <div style="margin-top: 24px; display: inline-flex; gap: 10px;">
+            <span style="background: rgba(255,255,255,0.18); color: #dbeafe; border-radius: 999px; padding: 8px 14px; font-size: 0.92rem;">Link direto para a comunidade</span>
+          </div>
+
           <div class="trust-list">
             <span>✓ Sites responsivos</span>
             <span>✓ Conteúdo para redes</span>
             <span>✓ Tráfego pago com foco em conversão</span>
           </div>
         </div>
+
         <div class="hero-card">
           <h3>O que você recebe</h3>
           <ul>
@@ -117,24 +282,25 @@
   </header>
 
   <main>
-    <section class="section" id="sobre">
+    <section class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Por que a ipUp_agencia?</h2>
-          <p>Mais do que um site, criamos presença profissional, autoridade e estrutura para vender melhor.</p>
+          <h2>Serviços pensados para marcas que querem crescer</h2>
+          <p>Estrutura, conteúdo e tráfego em um só lugar — com foco em presença premium e resultados.</p>
         </div>
+
         <div class="cards-grid">
           <article class="card">
-            <h3>Estratégia forte</h3>
-            <p>Planeamos cada detalhe com foco em posicionamento, mensagem e conversão.</p>
+            <h3>Web Premium</h3>
+            <p>Sites modernos, rápidos e otimizados para gerar confiança instantânea e capturar leads.</p>
           </article>
           <article class="card">
-            <h3>Design premium</h3>
-            <p>Layouts modernos, limpos e preparados para gerar confiança rápida.</p>
+            <h3>Vídeos Curtos</h3>
+            <p>Conteúdo de alto impacto para Reels, TikTok e Instagram com foco em autoridade e vendas.</p>
           </article>
           <article class="card">
-            <h3>Execução ágil</h3>
-            <p>Entregamos com velocidade, clareza e atenção aos resultados que realmente importam.</p>
+            <h3>Tráfego Estratégico</h3>
+            <p>Campanhas com segmentação inteligente e otimização contínua para reduzir custo por lead.</p>
           </article>
         </div>
       </div>
@@ -146,6 +312,7 @@
           <h2>Como trabalhamos</h2>
           <p>Processo simples, profissional e orientado para resultados.</p>
         </div>
+
         <div class="steps-grid">
           <article class="step">
             <h3>1. Diagnóstico</h3>
@@ -163,12 +330,13 @@
       </div>
     </section>
 
-    <section class="section" id="servicos">
+    <section class="section">
       <div class="container">
         <div class="section-title">
           <h2>Planos para marcas em diferentes estágios</h2>
           <p>Escolha a estrutura ideal para o seu momento e transforme presença em resultado.</p>
         </div>
+
         <div class="pricing-grid">
           <article class="pricing-card">
             <h3>Start</h3>
@@ -182,6 +350,7 @@
             </ul>
             <a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Quero este plano</a>
           </article>
+
           <article class="pricing-card featured">
             <h3>Growth</h3>
             <div class="price">R$ 4.800 <small>/ projeto</small></div>
@@ -194,6 +363,7 @@
             </ul>
             <a class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Quero este plano</a>
           </article>
+
           <article class="pricing-card">
             <h3>Pro</h3>
             <div class="price">R$ 8.500 <small>/ projeto</small></div>
@@ -216,6 +386,7 @@
           <h2>Simulador de investimento</h2>
           <p>Monte seu projeto e veja o valor estimado em tempo real.</p>
         </div>
+
         <div class="calculator-card">
           <div class="form-group">
             <label>Tipo de Website</label>
@@ -225,6 +396,7 @@
               <option value="4800" selected>Website interativo completo — R$ 4.800</option>
             </select>
           </div>
+
           <div class="form-group">
             <label>Vídeos curtos</label>
             <select id="videoCount" onchange="calculateTotal()">
@@ -234,6 +406,7 @@
               <option value="3500">12 vídeos — R$ 3.500</option>
             </select>
           </div>
+
           <div class="form-group">
             <label>Gestão de tráfego</label>
             <select id="traffic" onchange="calculateTotal()">
@@ -241,29 +414,33 @@
               <option value="1200" selected>Gestão mensal — R$ 1.200</option>
             </select>
           </div>
+
           <div class="total-price" id="totalDisplay">Investimento estimado: R$ 8.000,00</div>
+
           <div class="metric-row">
             <div class="metric-box"><strong>+150%</strong><span>crescimento médio</span></div>
             <div class="metric-box"><strong>+85%</strong><span>qualidade de leads</span></div>
             <div class="metric-box"><strong>97%</strong><span>satisfação</span></div>
           </div>
+
           <div class="cta-block">
             <a id="approveBtn" class="btn btn-primary" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Entrar na comunidade</a>
-            <a class="btn btn-secondary" style="color: var(--blue); border-color: rgba(37,99,235,.16); background: #fff;" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Entrar na comunidade</a>
+            <a class="btn btn-secondary" style="color: var(--blue); border-color: rgba(37,99,235,0.16);" href="https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x" target="_blank" rel="noopener">Entrar na comunidade</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="depoimentos">
+    <section class="section">
       <div class="container">
         <div class="section-title">
           <h2>O que nossos clientes dizem</h2>
           <p>Marcas e negócios que passaram a se posicionar com mais clareza e autoridade.</p>
         </div>
+
         <div class="testimonials-grid">
           <article class="testimonial">
-            <blockquote>“A ipUp_agencia transformou a nossa presença online em algo muito mais profissional e comercial.”</blockquote>
+            <blockquote>“A Up_agencia transformou a nossa presença online em algo muito mais profissional e comercial.”</blockquote>
             <footer>— Cliente que expandiu o negócio</footer>
           </article>
           <article class="testimonial">
@@ -289,8 +466,10 @@
       const traffic = parseInt(document.getElementById('traffic').value) || 0;
       const total = site + videos + traffic;
       document.getElementById('totalDisplay').innerText = 'Investimento estimado: R$ ' + total.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-      document.getElementById('approveBtn').href = 'https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x';
+      const message = encodeURIComponent(`Olá! Quero conversar sobre o projeto com investimento estimado de R$ ${total.toLocaleString('pt-BR')}.`);
+      document.getElementById('approveBtn').href = `https://whatsapp.com/channel/0029VbDaDfNG8l5IZcxQSF1x`;
     }
+
     document.addEventListener('DOMContentLoaded', calculateTotal);
   </script>
 </body>
